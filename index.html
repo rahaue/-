@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>練習</title>
+</head>
+<body>
+  <p>ようこそ<span id="name">テスト</span>さん！</p>
+  <p>あなたの運勢は<span id="result">大吉</span>です！</p>
+  <img src="omikuji.png">
+  <script>
+
+    var username;
+    var userresult;
+
+    username = prompt("お名前を入力してください");
+    document.getElementById("name").innerHTML = username;
+
+    // floorは小数点以下切り捨て
+    var rand = Math.floor( Math.random() * 5 );
+
+    if (rand == 0 ) {
+
+      userresult = "大吉"
+    
+    }
+
+    if (rand == 1 ) {
+      
+      userresult = "中吉";
+    
+    }
+
+    if ( rand == 2 ) {
+
+      userresult = "小吉"
+
+    } 
+    
+    if ( rand == 3 ) {
+      
+      userresult = "吉"
+
+    }
+
+    if ( rand == 4 ) {
+
+      userresult = "凶"
+
+    }
+
+    document.getElementById("result").innerHTML = userresult
+
+
+
+  </script>
+</body>
+</html>
